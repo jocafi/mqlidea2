@@ -1,0 +1,5 @@
+MQL4 File(0,54)
+  PsiComment(MQL4ElementType.LINE_COMMENT)('// line comment 1\n')(0,18)
+  PsiWhiteSpace(' ')(18,19)
+  PsiComment(MQL4ElementType.LINE_COMMENT)('// line comment 2\n')(19,37)
+  PsiComment(MQL4ElementType.LINE_COMMENT)('// line comment 3')(37,54)

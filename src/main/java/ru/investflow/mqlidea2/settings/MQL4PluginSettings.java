@@ -1,0 +1,18 @@
+package ru.investflow.mqlidea2.settings;
+
+import com.intellij.openapi.application.ApplicationManager;
+
+public interface MQL4PluginSettings {
+
+    boolean isUseEnDocs();
+
+    void setUseEnDocs(boolean v);
+
+    boolean performErrorAnalysis();
+
+    void setPerformErrorAnalysis(boolean v);
+
+    static MQL4PluginSettings getInstance() {
+        return ApplicationManager.getApplication().getComponent(MQL4PluginSettings.class);
+    }
+}

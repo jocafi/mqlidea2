@@ -1,0 +1,48 @@
+package ru.investflow.mqlidea2.structure.elements;
+
+import com.intellij.icons.AllIcons;
+import com.intellij.ide.structureView.StructureViewTreeElement;
+import com.intellij.navigation.ColoredItemPresentation;
+import com.intellij.navigation.ItemPresentation;
+import com.intellij.openapi.editor.colors.TextAttributesKey;
+import org.jetbrains.annotations.NotNull;
+import ru.investflow.mqlidea2.psi.impl.MQL4EnumElement;
+import ru.investflow.mqlidea2.structure.MQL4StructureViewElement;
+
+import javax.swing.Icon;
+
+
+public class MQL4StructureViewEnumElement extends MQL4StructureViewElement<MQL4EnumElement> {
+
+    public MQL4StructureViewEnumElement(@NotNull MQL4EnumElement element) {
+        super(element);
+    }
+
+    @NotNull
+    public StructureViewTreeElement[] getChildren() {
+        return element.getFields().stream()
+                .map(MQL4StructureViewEnumFieldElement::new)
+                .toArray(StructureViewTreeElement[]::new);
+    }
+
+    @NotNull
+    public ItemPresentation getPresentation() {
+        return new ColoredItemPresentation() {
+            public TextAttributesKey getTextAttributesKey() {
+                return null;
+            }
+
+            public String getPresentableText() {
+                return element.getTypeName();
+            }
+
+            public String getLocationString() {
+                return null;
+            }
+
+            public Icon getIcon(boolean open) {
+                return AllIcons.Nodes.Enum;
+            }
+        };
+    }
+}
