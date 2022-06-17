@@ -6,6 +6,8 @@
 ### Changed
 - Migration of project to a new GitHub repository: https://github.com/jocafi/mqlidea2
 - Update of project structure using IntelliJ Platform Plugin Template (https://github.com/JetBrains/intellij-platform-plugin-template)
+- Use of JUnit 5 (Jupiter) to test the code
+- Updated the plugin logo
 - Update `platformVersion` to `2022.1.2`
 - Change since/until build to `211-221.*` (2021.1 - 2022.1)
 - Upgrade Gradle Wrapper to `7.4`
