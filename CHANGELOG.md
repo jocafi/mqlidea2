@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [1.0.1]
+### Changed
+- Updated gradle plugins
+- Update `platformVersion` to `2023.1.5`
+- Change since/until build to `211-299.*` (2021.1 - 202x.1)
+- Upgrade Gradle Wrapper to `8.2.1`
+
+
 ## [1.0.0]
 ### Changed
 - Migration of project to a new GitHub repository: https://github.com/jocafi/mqlidea2
