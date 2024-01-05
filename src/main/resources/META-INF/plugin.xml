@@ -59,11 +59,13 @@
         <configurationType implementation="ru.investflow.mqlidea2.runconfig.MQL4RunCompilerConfigurationType"/>
 
         <!--
+        https://plugins.jetbrains.com/docs/intellij/settings-guide.html#declaring-application-settings
         https://confluence.jetbrains.com/display/IDEADEV/Customizing+the+IDEA+Settings+Dialog
         https://sites.google.com/site/malenkov/java/150403
         -->
         <projectConfigurable id="settings.mql4" groupId="language"
-                             instance="ru.investflow.mqlidea2.settings.MQL4PluginSettingsPanel"/>
+                             instance="ru.investflow.mqlidea2.settings.MQL4PluginSettingsPanel"
+                             displayName="MQL4"/>
 
         <!--Inspections-->
         <localInspection language="MQL4" groupName="MQL4 inspections" enabledByDefault="true" level="WARNING"

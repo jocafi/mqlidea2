@@ -101,7 +101,11 @@ public class MQL4PluginSettingsPanel extends JPanel implements Configurable {
     }
 
     private boolean isErrorAnalysisFlagChanged() {
-        return errorAnalysisCombo.getSelectedIndex() != (settings.performErrorAnalysis() ? 0 : 1);
+        if (settings == null) {
+            return false;
+        } else {
+            return errorAnalysisCombo.getSelectedIndex() != (settings.performErrorAnalysis() ? 0 : 1);
+        }
     }
 
     /**
